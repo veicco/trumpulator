@@ -2,10 +2,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class TextForm extends Component {
+  onSubmit = (e) => {
+    e.preventDefault()
+    this.props.handleSubmit()
+  }
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.onSubmit}>
           <div>
             <textarea type="text" placeholder="Give me some text"/>
           </div>
@@ -19,7 +23,7 @@ class TextForm extends Component {
 }
 
 TextForm.propTypes = {
-
+  handleSubmit: PropTypes.func.isRequired
 }
 
 export default TextForm

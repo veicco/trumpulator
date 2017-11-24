@@ -12,7 +12,7 @@ class Home extends Component {
         </Helmet>
         <section>
           <h1>Headline Pulator</h1>
-          <TextForm/>
+          <TextForm handleSubmit={this.props.actions.fetchHeadline}/>
       </section>
       </div>
     )
