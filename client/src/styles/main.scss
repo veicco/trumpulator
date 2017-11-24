@@ -1,0 +1,50 @@
+@import 'loader.scss';
+@import 'navbar.scss';
+
+body {
+  background: #263238;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+a, a:visited {
+  color: #42b983;
+  text-decoration: none;
+}
+
+a:active {
+  color: #CCCCCC;
+}
+
+a:hover {
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+h2 {
+  font-size: 1.3em;
+}
+p {
+  font-size: 1.1em;
+}
+
+ul {
+  list-style:none;
+  padding-left:0;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
