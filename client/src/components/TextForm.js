@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 class TextForm extends Component {
   onSubmit = (e) => {
     e.preventDefault()
-    this.props.handleSubmit()
+    this.props.handleSubmit(e.target.text.value)
   }
   render() {
     return (
       <div>
         <form onSubmit={this.onSubmit}>
           <div>
-            <textarea type="text" placeholder="Give me some text"/>
+            <textarea id="text" type="text" placeholder="Give me some text"/>
           </div>
           <div>
             <button type="submit">Go!</button>

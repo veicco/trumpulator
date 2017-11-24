@@ -12,12 +12,16 @@ export const REQUEST_HEADLINE = 'People/REQUEST_HEADLINE'
 export const REQUEST_HEADLINE_SUCCESS = 'People/REQUEST_HEADLINE_SUCCESS'
 export const REQUEST_HEADLINE_FAILURE = 'People/REQUEST_HEADLINE_FAILURE'
 
-export const fetchHeadline = () => {
+export const fetchHeadline = (text) => {
   return {
     [CALL_API]: {
       endpoint: 'http://localhost:9000/api-request/',
-      method: 'post',
-      body: {text: "tony hammainen o pro"},
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({text: text}),
       types: [REQUEST_HEADLINE, REQUEST_HEADLINE_SUCCESS, REQUEST_HEADLINE_FAILURE]
     }
   }
