@@ -12,14 +12,14 @@ class APIRequestView(APIView):
     A view that can accept POST requests with JSON content.
     """
     parser_classes = (JSONParser,)
-    
     def post(self, request, format=None):
         text = request.data.get("text", False)
         if not text:
-            return Response(request.data, status.HTTP_400_BAD_REQUEST)
+            return Response("Sorry, I don't understand you", status.HTTP_400_BAD_REQUEST)
         headline="What happened in Russia?"
         return Response(
             {
                 'headline': headline,
+                'text': text
             }
         )
