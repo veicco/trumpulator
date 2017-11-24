@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Redux kit',
+      title: 'Headline Pulator',
       template: './src/index.ejs'
     }),
     new webpack.HotModuleReplacementPlugin(),
