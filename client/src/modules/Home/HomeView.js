@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Helmet} from 'react-helmet'
 import PropTypes from 'prop-types'
+import TextForm from '../../components/TextForm'
 
 class Home extends Component {
   render() {
@@ -11,7 +12,7 @@ class Home extends Component {
         </Helmet>
         <section>
           <h1>Headline Pulator</h1>
-          
+          <TextForm/>
       </section>
       </div>
     )
