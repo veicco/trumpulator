@@ -15,8 +15,9 @@ export const REQUEST_HEADLINE_FAILURE = 'People/REQUEST_HEADLINE_FAILURE'
 export const fetchHeadline = () => {
   return {
     [CALL_API]: {
-      endpoint: 'https://swapi.co/api/planets/',
-      method: 'get',
+      endpoint: 'http://localhost:9000/api-request/',
+      method: 'post',
+      body: {text: "tony hammainen o pro"},
       types: [REQUEST_HEADLINE, REQUEST_HEADLINE_SUCCESS, REQUEST_HEADLINE_FAILURE]
     }
   }
