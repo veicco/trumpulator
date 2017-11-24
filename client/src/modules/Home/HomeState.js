@@ -4,7 +4,7 @@ import {CALL_API} from 'redux-api-middleware'
 const initialState = {
   isFetching: false,
   error: null,
-  data: null
+  data: {}
 }
 
 // Actions
@@ -34,7 +34,8 @@ export const HomeStateReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         isFetching: true,
-        error: null
+        error: null,
+        data: {}
       }
     case REQUEST_HEADLINE_SUCCESS:
       return {

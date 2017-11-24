@@ -6,7 +6,7 @@ import * as HomeStateActions from './HomeState';
 
 export default connect(
   state => ({
-    home: state.home
+    headline: state.home.data.headline
   }),
   dispatch => {
     return {
