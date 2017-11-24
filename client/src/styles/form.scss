@@ -1,0 +1,18 @@
+#form textarea {
+  outline: none;
+  resize: none;
+  overflow: auto;
+  width: 40em;
+  height: 20em;
+  font-size: 0.8em;
+}
+
+#form textarea:focus {
+  border-color: #719ECE;
+  box-shadow: 0 0 3px #719ECE;
+}
+
+#form button {
+  width: 10em;
+  font-size: 0.8em;
+}

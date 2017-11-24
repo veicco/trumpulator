@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class ResultText extends Component {
   render() {
     return (
-      <div>
+      <div id="result">
         {this.props.text}
       </div>
     )

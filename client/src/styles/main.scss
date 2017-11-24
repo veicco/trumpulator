@@ -1,13 +1,14 @@
 @import 'loader.scss';
 @import 'navbar.scss';
+@import 'result.scss';
+@import 'form.scss';
 
 body {
-  background: #263238;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #FFFFFF;
   text-align: center;
+  font-size: 1.2em;
 }
 
 a, a:visited {
@@ -31,20 +32,4 @@ h2 {
 }
 p {
   font-size: 1.1em;
-}
-
-ul {
-  list-style:none;
-  padding-left:0;
-}
-
-table {
-  margin: auto;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
 }

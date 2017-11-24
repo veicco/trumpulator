@@ -8,7 +8,7 @@ class TextForm extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="form">
         <form onSubmit={this.onSubmit}>
           <div>
             <textarea id="text" type="text" placeholder="Give me some text"/>
