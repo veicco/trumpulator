@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack -p",
+    "build:debug": "webpack",
     "start": "webpack-dev-server --open",
     "test": "find ./src -name '*.test.js' | xargs mocha --compilers js:babel-core/register --require ignore-styles ./test/configure.js -R spec"
   },
