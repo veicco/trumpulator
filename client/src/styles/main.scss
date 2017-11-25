@@ -4,11 +4,22 @@
 @import 'form.scss';
 @import 'tag.scss';
 
+/*
+$black: #000000;
+$white: #ffffff;
+$lightred: #f7cac9;
+$darkred: #f7786b;
+$darkblue: #034f84;
+$lightblue: #92a8d1;
+*/
+
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: #f7786b;
+  color: #000000;
 }
 
 a, a:visited {
@@ -26,6 +37,8 @@ a:hover {
 
 h1 {
   font-size: 1.6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 h2 {
   font-size: 1.3em;
