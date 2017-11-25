@@ -3,11 +3,15 @@ import PropTypes from 'prop-types'
 import Tag from './Tag'
 import Card from './Card'
 import Cloud from './Cloud'
+import Loader from './Loader'
 
 class ResultText extends Component {
   render() {
+    if (this.props.loading) {
+      return <Loader/>
+    }
     if (!this.props.tags) {
-      return null;
+      return null
     }
     return (
       <div id="result">
@@ -26,6 +30,7 @@ class ResultText extends Component {
 }
 
 ResultText.propTypes = {
+  loading: PropTypes.bool.isRequired,
   tags: PropTypes.array
 }
 
