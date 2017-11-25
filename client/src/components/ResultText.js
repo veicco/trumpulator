@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Tag from './Tag'
+import Card from './Card'
 import Cloud from './Cloud'
 
 class ResultText extends Component {
@@ -10,7 +11,7 @@ class ResultText extends Component {
         text: tag,
         value: this.props.tags[0][tag]
       }
-    })
+    }).sort((left,right) => right.value-left.value)
   }
   render() {
     if (!this.props.tags) {
@@ -21,9 +22,15 @@ class ResultText extends Component {
     // )
     return (
       <div id="result">
-        {Object.keys(this.props.tags[0]).map((tag,key) => {
-          return(<Tag key={key} text={tag} value={this.props.tags[0][tag]}/>)
+        <div className="row">
+        {this.getTags(this.props.tags[0]).map((tag,key) => {
+          return(
+            <div className="col-sm-4">
+              <Card key={key} text={tag.text} value={tag.value.toFixed(2)}/>
+            </div>
+          )
         })}
+        </div>
       </div>
     )
   }
