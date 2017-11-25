@@ -5,14 +5,15 @@ class Tag extends Component {
   render() {
     return (
       <div className="tag">
-        {this.props.text + " "}
+        {this.props.text + " " }
       </div>
     )
   }
 }
 
 Tag.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired
 }
 
 export default Tag
