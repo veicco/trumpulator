@@ -4,7 +4,10 @@ import PropTypes from 'prop-types'
 class Loader extends Component {
   render() {
     return (
-      <div className="loader"></div>
+      <div>
+        <p>Donald Trump is writing...</p>
+        <div className="loader"></div>
+      </div>
     )
   }
 }
