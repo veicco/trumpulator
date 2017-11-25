@@ -25,7 +25,7 @@ SECRET_KEY = 'git)d8oh0l&68xu^q_g9wb4$-gb4fo$=m2a(#p9&)ou0ugxf=&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.veikko.it', 'localhost:9000', '127.0.0.1:9000']
 
 
 # Application definition
