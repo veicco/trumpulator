@@ -16,6 +16,9 @@ class ResultText extends Component {
     return (
       <div id="result">
         <div className="row">
+          <p>{this.props.tweet}</p>
+        </div>
+        <div className="row">
         {this.props.tags.map((tag,key) => {
           return(
             <div key={key} className="col-sm-4">
@@ -31,7 +34,8 @@ class ResultText extends Component {
 
 ResultText.propTypes = {
   loading: PropTypes.bool.isRequired,
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  tweet: PropTypes.string
 }
 
 export default ResultText

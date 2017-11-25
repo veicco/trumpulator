@@ -14,7 +14,7 @@ class Home extends Component {
         <section>
           <h1>Headline Pulator</h1>
           <TextForm handleSubmit={(text) => this.props.homeActions.fetchHeadline(text)}/>
-          <ResultText tags={this.props.home.data.tags} loading={this.props.home.isFetching}/>
+          <ResultText tags={this.props.home.data.tags} tweet={this.props.home.data.tweet} loading={this.props.home.isFetching}/>
       </section>
       </div>
     )
