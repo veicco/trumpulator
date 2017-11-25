@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework import status
-
+from app import calculation
 
 class APIRequestView(APIView):
     """
@@ -16,10 +16,10 @@ class APIRequestView(APIView):
         text = request.data.get("text", False)
         if not text:
             return Response("Sorry, I don't understand you", status.HTTP_400_BAD_REQUEST)
-        headline="What happened in Russia?"
+        tags_json = calculation.get_tags(text)
         return Response(
             {
-                'headline': headline,
+                'tags': tags_json,
                 'text': text
             }
         )
