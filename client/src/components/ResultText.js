@@ -15,7 +15,7 @@ class ResultText extends Component {
         {this.props.tags.map((tag,key) => {
           return(
             <div key={key} className="col-sm-4">
-              <Card text={tag.text} value={tag.value.toFixed(2)}/>
+              <Card text={tag.text} value={tag.value.toFixed(2)} url={tag.url}/>
             </div>
           )
         })}

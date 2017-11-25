@@ -6,7 +6,7 @@ class Card extends Component {
     return (
         <div className="card">
           <h4>{this.props.text}</h4>
-          <img className="" src="http://via.placeholder.com/150x150" alt={this.props.value}/>
+          <img className="" src={this.props.url} alt={this.props.value}/>
         </div>
     )
   }
@@ -14,7 +14,8 @@ class Card extends Component {
 
 Card.propTypes = {
   text: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 }
 
 export default Card
