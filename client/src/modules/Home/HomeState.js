@@ -15,7 +15,7 @@ export const REQUEST_HEADLINE_FAILURE = 'People/REQUEST_HEADLINE_FAILURE'
 export const fetchHeadline = (text) => {
   return {
     [CALL_API]: {
-      endpoint: 'http://localhost:9000/api-request/',
+      endpoint: 'http://localhost:9000/headline/',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

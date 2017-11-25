@@ -3,16 +3,19 @@
   resize: none;
   overflow: auto;
   width: 40em;
+  max-width: 90%;
   height: 20em;
   font-size: 0.8em;
+  border-color: #eee;
 }
 
 #form textarea:focus {
-  border-color: #719ECE;
+  border-color: #ddd;
   box-shadow: 0 0 3px #719ECE;
 }
 
 #form button {
+  margin: 2em;
   width: 10em;
   font-size: 0.8em;
 }
