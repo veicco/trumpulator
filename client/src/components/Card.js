@@ -14,7 +14,7 @@ class Card extends Component {
 
 Card.propTypes = {
   text: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired
+  value: PropTypes.string.isRequired
 }
 
 export default Card

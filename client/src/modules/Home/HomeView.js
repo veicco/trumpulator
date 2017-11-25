@@ -13,8 +13,8 @@ class Home extends Component {
         </Helmet>
         <section>
           <h1>Headline Pulator</h1>
-          <TextForm handleSubmit={(text) => this.props.actions.fetchHeadline(text)}/>
-          <ResultText tags={this.props.tags}/>
+          <TextForm handleSubmit={(text) => this.props.homeActions.fetchHeadline(text)}/>
+          <ResultText tags={this.props.home.data.tags}/>
       </section>
       </div>
     )
@@ -22,9 +22,8 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-  actions: PropTypes.object.isRequired,
-  headline: PropTypes.string,
-  tags: PropTypes.object
+  homeActions: PropTypes.object.isRequired,
+  home: PropTypes.object
 }
 
 export default Home

@@ -3,15 +3,15 @@ import {connect} from 'react-redux'
 import {routerActions} from 'react-router-redux'
 import HomeView from './HomeView'
 import * as HomeStateActions from './HomeState';
+import * as ImageStateActions from './ImageState';
 
 export default connect(
   state => ({
-    headline: state.home.data.headline,
-    tags: state.home.data.tags
+    home: state.home
   }),
   dispatch => {
     return {
-      actions: bindActionCreators(HomeStateActions, dispatch),
+      homeActions: bindActionCreators(HomeStateActions, dispatch),
       routeractions: bindActionCreators(routerActions, dispatch)
     }
   }

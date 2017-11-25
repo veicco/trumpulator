@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^$', IndexView.as_view(), name='index'),
 
     # API
-    url(r'^headline/$', APIRequestView.as_view(), name='api_request'),
+    url(r'^tags/$', TagsView.as_view(), name='tags_request'),
+    url(r'^image/$', ImageUrlView.as_view(), name='image_request'),
 ]
