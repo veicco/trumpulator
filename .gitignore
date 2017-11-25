@@ -3,3 +3,5 @@
 *node_modules/
 .ipynb*
 *scraper.py
+server/word-rnn-tensorflow/
+yarn.lock
