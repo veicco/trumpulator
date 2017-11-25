@@ -9,12 +9,12 @@ class TextForm extends Component {
   render() {
     return (
       <div id="form">
-        <form onSubmit={this.onSubmit}>
-          <div>
+        <form className="form" onSubmit={this.onSubmit}>
+          <div className="form-group">
             <textarea id="text" type="text" placeholder="Give me some text"/>
           </div>
-          <div>
-            <button type="submit">Go!</button>
+          <div className="form-group">
+            <button type="submit" className="btn btn-default">Pulate</button>
           </div>
         </form>
       </div>

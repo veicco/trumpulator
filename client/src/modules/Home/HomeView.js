@@ -7,7 +7,7 @@ import ResultText from '../../components/ResultText'
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Helmet>
           <title>Headline Pulator</title>
         </Helmet>
