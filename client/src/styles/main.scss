@@ -2,13 +2,13 @@
 @import 'navbar.scss';
 @import 'result.scss';
 @import 'form.scss';
+@import 'tag.scss';
 
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  font-size: 1.2em;
 }
 
 a, a:visited {
@@ -31,5 +31,5 @@ h2 {
   font-size: 1.3em;
 }
 p {
-  font-size: 1.1em;
+  font-size: 1.0em;
 }
