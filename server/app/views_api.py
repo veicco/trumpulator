@@ -15,7 +15,7 @@ class TagsView(APIView):
             return Response("Sorry, I don't understand you", status.HTTP_400_BAD_REQUEST)
         tags_json = calculation.get_tags(text)
         
-        tweet = scraper.get_tweet(tags_json["0"].keys())
+        tweet = scraper.get_tweet(list(tags_json["0"].keys()))
         
         tags_mapped = {}
         tags_mapped["text"] = text
