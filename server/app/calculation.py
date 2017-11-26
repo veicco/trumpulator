@@ -14,4 +14,4 @@ def get_tags(text):
         sorted_df = words_df.T.sort(columns=0, ascending=False)
     else:
         sorted_df = words_df.T.sort_values(by=0, ascending=False)
-    return json.loads(sorted_df.head(2).to_json())
+    return json.loads(sorted_df.head(3).to_json())
