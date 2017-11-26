@@ -29,7 +29,11 @@ class Tweet extends Component {
             <p>{this.props.error.response}</p>
           }
           {this.props.loading &&
-            <p>@fakeDonaldTrump is typing...</p>
+            <p>@fakeDonaldTrump is typing
+              <span class="loader-dot">.</span>
+              <span class="loader-dot">.</span>
+              <span class="loader-dot">.</span>
+            </p>
           }
           {this.props.text &&
             <p>{this.props.text}</p>
