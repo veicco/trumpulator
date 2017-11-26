@@ -4,6 +4,7 @@ import Tag from './Tag'
 import Card from './Card'
 import Cloud from './Cloud'
 import Loader from './Loader'
+import Tweet from './Tweet'
 
 class ResultText extends Component {
   render() {

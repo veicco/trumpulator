@@ -5,6 +5,7 @@
 @import 'tag.scss';
 @import 'cloud.scss';
 @import 'card.scss';
+@import 'tweet.scss';
 
 /*
 $black: #000000;
@@ -19,7 +20,6 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background-color: #f7786b;
   color: #000000;
 }
