@@ -25,23 +25,31 @@ class Tweet extends Component {
           </div>
         </div>
         <div className="tweet-body">
-          <p>Time Magazine called to say that I was PROBABLY going to be named “Man (Person) of the Year,” like last year, but I would have to agree to an interview and a major photo shoot. I said probably is no good and took a pass. Thanks anyway!</p>
+          {this.props.loading &&
+            <p>@fakeDonaldTrump is typing...</p>
+          }
+          {this.props.text &&
+            <p>{this.props.text}</p>
+          }
         </div>
-        <div className="footer">
-          <div className="time">Just now</div>
-          <div className="buttons">
-            <a className="button"><div className="comment"></div>30 124</a>
-            <a className="button"><div className="share"></div> 22 633</a>
-            <a className="button"><div className="heart"></div> 91 036</a>
+        {!this.props.loading && this.props.text &&
+          <div className="footer">
+            <div className="time">Just now</div>
+            <div className="buttons">
+              <a className="button"><div className="comment"></div>30 124</a>
+              <a className="button"><div className="share"></div> 22 633</a>
+              <a className="button"><div className="heart"></div> 91 036</a>
+            </div>
           </div>
-        </div>
+        }
       </div>
     )
   }
 }
 
 Tweet.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired
 }
 
 export default Tweet
