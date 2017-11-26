@@ -13,19 +13,27 @@ class TagsView(APIView):
         text = request.data.get("text", False)
         if not text:
             return Response("Sorry, I don't understand you", status.HTTP_400_BAD_REQUEST)
-        tags_json = calculation.get_tags(text)
-        
-        tweet = scraper.get_tweet(list(tags_json["0"].keys()))
+        tags_json = None
+        tweet = None
+        url = None
+        try:
+            tags_json = calculation.get_tags(text)
+            tweet = scraper.get_tweet(list(tags_json["0"].keys()))
+            url = scraper.scrape_google_photo_url(list(tags_json["0"].keys())[0])
+        except:
+            return Response("Sorry, I don't understand you", status.HTTP_400_BAD_REQUEST)
         
         tags_mapped = {}
         tags_mapped["text"] = text
         tags_mapped["tweet"] = tweet
+        tags_mapped["url"] = url
         tags_mapped["tags"] = []
+        
         for key in tags_json["0"]:
             tag = {}
             tag["text"] = key
             tag["value"] = tags_json["0"][key]
-            tag["url"] = scraper.scrape_google_photo_url(key)
+            #tag["url"] = scraper.scrape_google_photo_url(key)
             tags_mapped["tags"].append(tag)
         
         return Response(

@@ -19,9 +19,8 @@ class Home extends Component {
             <Tweet text="" loading={true}/>
           }
           {!this.props.home.isFetching && this.props.home.data.text &&
-            <Tweet text={this.props.home.data.text} loading={false}/>
+            <Tweet text={this.props.home.data.tweet} url={this.props.home.data.url} loading={false}/>
           }
-          <ResultText tags={this.props.home.data.tags} tweet={this.props.home.data.tweet} loading={this.props.home.isFetching}/>
       </section>
       </div>
     )

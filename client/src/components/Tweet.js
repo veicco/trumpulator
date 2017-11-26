@@ -31,6 +31,9 @@ class Tweet extends Component {
           {this.props.text &&
             <p>{this.props.text}</p>
           }
+          {this.props.url &&
+            <img src={this.props.url}/>
+          }
         </div>
         {!this.props.loading && this.props.text &&
           <div className="footer">
@@ -49,7 +52,8 @@ class Tweet extends Component {
 
 Tweet.propTypes = {
   text: PropTypes.string.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  url: PropTypes.string.isRequired
 }
 
 export default Tweet
