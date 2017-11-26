@@ -12,7 +12,7 @@ class TagsView(APIView):
     def post(self, request, format=None):
         text = request.data.get("text", False)
         if not text:
-            return Response("Sorry, I don't understand you", status.HTTP_400_BAD_REQUEST)
+            return Response("Write something, DUMBASS!", status.HTTP_400_BAD_REQUEST)
         tags_json = None
         tweet = None
         url = None
