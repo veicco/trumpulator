@@ -11,7 +11,7 @@ class TextForm extends Component {
       <div id="form">
         <form className="form" onSubmit={this.onSubmit}>
           <div className="form-group">
-            <textarea id="text" type="text" placeholder="Give me some text"/>
+            <textarea id="text" type="text" placeholder="Give me an article to tweet about"/>
           </div>
           <div className="form-group" style={{textAlign: "center"}}>
             <button type="submit" className="btn btn-default">Trumpulate</button>
