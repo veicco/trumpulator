@@ -18,7 +18,8 @@ class TagsView(APIView):
         url = None
         try:
             tags_json = calculation.get_tags(text)
-            tweet = scraper.get_tweet(list(tags_json["0"].keys()))
+            tags_capital = [x[:1].upper()+x[1:] for x in list(tags_json["0"].keys())]
+            tweet = scraper.get_tweet(tags_capital)
             url = scraper.scrape_google_photo_url(list(tags_json["0"].keys())[0])
         except:
             return Response("You write nonsense, DISRESPECT!", status.HTTP_400_BAD_REQUEST)
