@@ -48,7 +48,8 @@ export const HomeStateReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         isFetching: false,
-        error: action.payload
+        error: action.payload,
+        data: {}
       }
     default:
       return state

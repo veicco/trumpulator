@@ -25,6 +25,9 @@ class Tweet extends Component {
           </div>
         </div>
         <div className="tweet-body">
+          {this.props.error && 
+            <p>{this.props.error.response}</p>
+          }
           {this.props.loading &&
             <p>@fakeDonaldTrump is typing...</p>
           }
@@ -51,9 +54,9 @@ class Tweet extends Component {
 }
 
 Tweet.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   loading: PropTypes.bool.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string
 }
 
 export default Tweet

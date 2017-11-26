@@ -15,6 +15,9 @@ class Home extends Component {
         <section>
           <h1>Headline Pulator</h1>
           <TextForm handleSubmit={(text) => this.props.homeActions.fetchHeadline(text)}/>
+          {this.props.home.error &&
+            <Tweet error={this.props.home.error} loading={false}/>
+          }
           {this.props.home.isFetching &&
             <Tweet text="" loading={true}/>
           }
