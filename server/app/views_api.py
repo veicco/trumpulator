@@ -21,7 +21,7 @@ class TagsView(APIView):
             tweet = scraper.get_tweet(list(tags_json["0"].keys()))
             url = scraper.scrape_google_photo_url(list(tags_json["0"].keys())[0])
         except:
-            return Response("I don't have time for your nonsense", status.HTTP_400_BAD_REQUEST)
+            return Response("You write nonsense, DISRESPECT!", status.HTTP_400_BAD_REQUEST)
         
         tags_mapped = {}
         tags_mapped["text"] = text
