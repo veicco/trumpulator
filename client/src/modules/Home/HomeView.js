@@ -12,8 +12,11 @@ class Home extends Component {
         <Helmet>
           <title>Trumpulator</title>
         </Helmet>
+        <div id="bg"></div>
         <section>
-          <h1>Trumpulator</h1>
+          <div id="page-title">
+            <h1>Trumpulator</h1>
+          </div>
           <TextForm handleSubmit={(text) => this.props.homeActions.fetchHeadline(text)}/>
           {this.props.home.error &&
             <Tweet error={this.props.home.error} loading={false}/>
