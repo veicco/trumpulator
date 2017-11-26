@@ -9,6 +9,9 @@ class Home extends Component {
   render() {
     return (
       <div className="container">
+        <audio autoPlay>
+          <source src="http://www.mostfreebies.com/PatrioticNostalgicMusic/music/USAFB_TheStarSpangledBanner.mp3"/>
+        </audio>
         <Helmet>
           <title>Trumpulator</title>
         </Helmet>
