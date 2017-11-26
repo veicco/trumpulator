@@ -10,10 +10,10 @@ class Home extends Component {
     return (
       <div className="container">
         <Helmet>
-          <title>Headline Pulator</title>
+          <title>Trumpulator</title>
         </Helmet>
         <section>
-          <h1>Headline Pulator</h1>
+          <h1>Trumpulator</h1>
           <TextForm handleSubmit={(text) => this.props.homeActions.fetchHeadline(text)}/>
           {this.props.home.error &&
             <Tweet error={this.props.home.error} loading={false}/>

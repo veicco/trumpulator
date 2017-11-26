@@ -13,8 +13,8 @@ class TextForm extends Component {
           <div className="form-group">
             <textarea id="text" type="text" placeholder="Give me some text"/>
           </div>
-          <div className="form-group">
-            <button type="submit" className="btn btn-default">Pulate</button>
+          <div className="form-group" style={{textAlign: "center"}}>
+            <button type="submit" className="btn btn-default">Trumpulate</button>
           </div>
         </form>
       </div>
