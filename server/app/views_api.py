@@ -6,6 +6,8 @@ from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework import status
 from app import calculation, scraper
+import traceback
+import logging
 
 class TagsView(APIView):
     parser_classes = (JSONParser,)
@@ -21,7 +23,8 @@ class TagsView(APIView):
             tags_capital = [x[:1].upper()+x[1:] for x in list(tags_json["0"].keys())]
             tweet = scraper.get_tweet(tags_capital)
             url = scraper.scrape_google_photo_url(" ".join(list(tags_json["0"].keys())))
-        except:
+        except Exception as e:
+            logging.error(traceback.format_exc())
             return Response("You write nonsense, DISRESPECT!", status.HTTP_400_BAD_REQUEST)
 
         tags_mapped = {}
