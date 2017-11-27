@@ -20,23 +20,23 @@ class TagsView(APIView):
             tags_json = calculation.get_tags(text)
             tags_capital = [x[:1].upper()+x[1:] for x in list(tags_json["0"].keys())]
             tweet = scraper.get_tweet(tags_capital)
-            url = scraper.scrape_google_photo_url(list(tags_json["0"].keys())[0])
+            url = scraper.scrape_google_photo_url(" ".join(list(tags_json["0"].keys())))
         except:
             return Response("You write nonsense, DISRESPECT!", status.HTTP_400_BAD_REQUEST)
-        
+
         tags_mapped = {}
         tags_mapped["text"] = text
         tags_mapped["tweet"] = tweet
         tags_mapped["url"] = url
         tags_mapped["tags"] = []
-        
+
         for key in tags_json["0"]:
             tag = {}
             tag["text"] = key
             tag["value"] = tags_json["0"][key]
             #tag["url"] = scraper.scrape_google_photo_url(key)
             tags_mapped["tags"].append(tag)
-        
+
         return Response(
             tags_mapped
         )
