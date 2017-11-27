@@ -4,3 +4,4 @@ django-cors-middleware
 numpy
 pandas
 sklearn
+skipy
