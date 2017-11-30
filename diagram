@@ -1,0 +1,33 @@
+graph TB
+    user((User))
+
+    subgraph frontend
+      react[React client]
+    end
+    subgraph backend
+      api[REST API: django]
+      text[text pre-prosessor: scikit-learn]
+      text_d[convert to bag-of-words <br> using tf-idf function]
+      rnn[Recurrent Neural Network: tensorflow]
+      rnn_d[generate text based on <br> the most relevant words]
+      scraper[Web scraper]
+      scraper_d[search for an image <br> using the most relevant words]
+    end
+    subgraph internet
+      google[Google]
+    end
+
+    user .-> react
+    react .-> api
+    api .-> text_d
+    text_d .-> text
+    text .-> scraper_d
+    scraper_d .-> scraper
+    text .-> rnn_d
+    rnn_d .-> rnn
+    scraper .-> google
+
+
+    style text_d fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
+    style rnn_d fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
+    style scraper_d fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
