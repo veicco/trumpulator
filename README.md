@@ -23,7 +23,6 @@ Our solution is a web application that takes raw text, such as a news article
 or a blog post, as input from the user. It generates a tweet as @fakeDonaldTrump
 about the text using a <i>long short-term memory recurrent neural network </i> model
 (LSTM RNN) which we trained with a dataset of 20k tweets by Donald Trump.
- 
 
 ![Trumpulator](screenshot.png)
 
