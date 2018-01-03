@@ -6,3 +6,4 @@
 server/word-rnn-tensorflow/
 yarn.lock
 .idea/
+.vagrant/
