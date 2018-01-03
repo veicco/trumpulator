@@ -5,3 +5,4 @@
 *scraper.py
 server/word-rnn-tensorflow/
 yarn.lock
+.idea/

@@ -2,15 +2,15 @@ graph TB
     user((User))
 
     subgraph frontend
-      react[React client]
+      react[Client app: React]
     end
     subgraph backend
       api[REST API: django]
       text[text pre-prosessor: scikit-learn]
       text_d[convert to bag-of-words <br> using tf-idf function]
-      rnn[Recurrent Neural Network: tensorflow]
+      rnn[LSTM RNN: tensorflow <br> - trained with 20 000 Trump tweets]
       rnn_d[generate text based on <br> the most relevant words]
-      scraper[Web scraper]
+      scraper[Web scraper: Dryscrape + BS4]
       scraper_d[search for an image <br> using the most relevant words]
     end
     subgraph internet
@@ -18,7 +18,7 @@ graph TB
     end
 
     user .-> react
-    react .-> api
+    react -. send raw text .-> api
     api .-> text_d
     text_d .-> text
     text .-> scraper_d
